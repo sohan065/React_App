@@ -14,6 +14,7 @@ export default function Home() {
   const handleNewTodo = (newTodo) => {
     setTodo([...todo, newTodo]);
   };
+  console.log(todo);
   const removeTodo = (id) => {
     const filterTodo = todo.filter((todo) => todo.id !== id);
     setTodo(filterTodo);
