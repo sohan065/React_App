@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Todos from "./Todos";
 import NewTodo from "./NewTodo";
+import Fetch from "./UseEffect/Fetch";
 
 export default function Home() {
   const dummyTodo = [
@@ -14,15 +15,15 @@ export default function Home() {
   const handleNewTodo = (newTodo) => {
     setTodo([...todo, newTodo]);
   };
-  console.log(todo);
   const removeTodo = (id) => {
     const filterTodo = todo.filter((todo) => todo.id !== id);
     setTodo(filterTodo);
   };
   return (
     <div>
-      <NewTodo onNewTodo={handleNewTodo} />
-      <Todos todos={todo} onRemove={removeTodo} />
+      {/* <NewTodo onNewTodo={handleNewTodo} />
+      <Todos todos={todo} onRemove={removeTodo} /> */}
+      <Fetch />
     </div>
   );
 }
